@@ -27,25 +27,15 @@ class LoginView extends GetView<LoginController> {
             tileMode: TileMode.mirror,
           ),
         ),
-        child: Row(children: [
-          Expanded(
-            child: Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
-                ),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'assets/images/Logo.png',
+                width: 200,
+                height: 200,
               ),
-              child: Column(children: [
-                Image.asset(
-                  'assets/images/Logo.png',
-                  width: 200,
-                  height: 200,
-                ),
-              ]),
-            ),
-          ),
-        ]),
+            ]),
       ),
     );
   }
