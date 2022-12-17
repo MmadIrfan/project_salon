@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:project_salon/navbar.dart';
+
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
@@ -13,6 +15,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
+      drawer: BottomMenu(),
       body: Center(
         child: Text(
           'HomeView is working',
