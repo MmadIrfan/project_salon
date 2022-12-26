@@ -7,6 +7,7 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const PELANGGAN = _Paths.PELANGGAN;
   static const PENGATURAN = _Paths.PENGATURAN;
+  static const NAVBAR = _Paths.NAVBAR;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const PELANGGAN = '/pelanggan';
   static const PENGATURAN = '/pengaturan';
+  static const NAVBAR = '/navbar';
 }

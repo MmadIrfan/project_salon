@@ -10,19 +10,26 @@ class PelangganView extends GetView<PelangganController> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: _data(),
+        backgroundColor: Colors.pink,
+        body: _page(),
       ),
     );
   }
 
-    Widget _data() {
+  Widget _page() {
     return Padding(
-      padding: const EdgeInsets.all(32.0),
-      child: Center(
-        child: Column(
+      padding: const EdgeInsets.all(20.0),
+      child: Container(
+        height: 60.0,
+        width: 60.0,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.white, width: 5),
+          borderRadius: BorderRadius.circular(70),
+          color: Colors.white,
         ),
+        child: Image.asset('assets/images/Logo.png'),
+        alignment: Alignment.topLeft,
       ),
     );
-   }
+  }
 }

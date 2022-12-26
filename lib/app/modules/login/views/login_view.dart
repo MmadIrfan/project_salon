@@ -106,7 +106,7 @@ class LoginView extends GetView<LoginController> {
           )),
       style: ElevatedButton.styleFrom(
         shape: const StadiumBorder(),
-        primary: const Color(0xfff966be),
+        primary: Color.fromARGB(255, 233, 30, 99),
         onPrimary: Colors.white,
         padding: const EdgeInsets.symmetric(vertical: 16),
       ),
