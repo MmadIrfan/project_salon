@@ -9,22 +9,21 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Application",
       initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
       home: GetxBottomBarView(
         getPages: AppPages.routes,
         routes: const [Routes.HOME, Routes.PELANGGAN, Routes.PENGATURAN],
         defaultTransition: Transition.noTransition,
         bottomBar: <GetBottomBarItem>[
           GetBottomBarItem(
-              icon: Icon(Icons.dashboard),
+              icon: Image(image: AssetImage('assets/icons/stokproduk.png')),
               title: Text('Stok'),
               activeColor: Colors.red),
           GetBottomBarItem(
-              icon: Icon(Icons.person),
+              icon: Image(image: AssetImage('assets/icons/pelanggan.png')),
               title: Text('Pelanggan'),
               activeColor: Colors.red),
           GetBottomBarItem(
-              icon: Icon(Icons.person_add),
+              icon: Image(image: AssetImage('assets/icons/uisetting.png')),
               title: Text('Pengaturan'),
               activeColor: Colors.red)
         ],

@@ -23,18 +23,20 @@ class ProfilView extends GetView<ProfilController> {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
+            leading: Image.asset('assets/images/Logo.png'),
             title: const Text('Profil'),
             centerTitle: true,
           ),
-          body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              const Text('Nama :'),
-              const Text('Status :'),
-              const Text('No Hp :'),
-              const Text('Cabang:'),
-            ]),
-          ),
+          body: Container(
+              margin: EdgeInsets.all(20),
+              height: 200,
+              width: 200,
+              alignment: Alignment.topLeft,
+              color: Colors.white,
+              child: Text(
+                'Nama : ',
+                style: TextStyle(fontSize: 20, color: Colors.black),
+              )),
         ));
   }
 }

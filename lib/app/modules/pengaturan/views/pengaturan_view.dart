@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 
 import '../controllers/pengaturan_controller.dart';
 
+import 'profil_view.dart';
+
 class PengaturanView extends GetView<PengaturanController> {
   const PengaturanView({Key? key}) : super(key: key);
   @override
@@ -21,6 +23,7 @@ class PengaturanView extends GetView<PengaturanController> {
         child: Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBar(
+              leading: Image.asset('assets/images/Logo.png'),
               title: const Text('Pengaturan'),
               centerTitle: true,
             ),
@@ -33,8 +36,10 @@ class PengaturanView extends GetView<PengaturanController> {
                       overlayColor:
                           MaterialStateProperty.all<Color>(Colors.green)),
                   onPressed: () {
-                    ScaffoldMessenger.of(context)
-                        .showSnackBar(const SnackBar(content: Text('Profil')));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilView()));
                   },
                   child: const Text('Profil'),
                 ),
