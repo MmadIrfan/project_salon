@@ -6,6 +6,8 @@ import '../controllers/pengaturan_controller.dart';
 
 import 'profil_view.dart';
 
+import 'package:project_salon/app/modules/login/views/login_view.dart';
+
 class PengaturanView extends GetView<PengaturanController> {
   const PengaturanView({Key? key}) : super(key: key);
   @override
@@ -59,8 +61,12 @@ class PengaturanView extends GetView<PengaturanController> {
                         overlayColor:
                             MaterialStateProperty.all<Color>(Colors.green)),
                     onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginView()));
                       ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Logout')));
+                          const SnackBar(content: Text('Logout berhasil')));
                     },
                     child: const Text('Logout'))
               ],

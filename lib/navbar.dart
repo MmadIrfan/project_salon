@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getxbottombar/getxbottombar.dart';
+import 'app/routes/app_pages.dart';
 
 class BottomMenu extends StatelessWidget {
-  final selectedIndex;
-  ValueChanged<int> onClicked;
-  BottomMenu({this.selectedIndex, required this.onClicked});
+  const BottomMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Stok',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.new_releases),
-          label: 'Pelanggan',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.question_answer),
-          label: 'Pengaturan',
-        )
+    return GetxBottomBarView(
+      getPages: AppPages.routes,
+      routes: const [Routes.HOME, Routes.PELANGGAN, Routes.PENGATURAN],
+      defaultTransition: Transition.noTransition,
+      bottomBar: <GetBottomBarItem>[
+        GetBottomBarItem(
+            icon: Image(image: AssetImage('assets/icons/stokproduk.png')),
+            title: Text('Stok'),
+            activeColor: Colors.red),
+        GetBottomBarItem(
+            icon: Image(image: AssetImage('assets/icons/pelanggan.png')),
+            title: Text('Pelanggan'),
+            activeColor: Colors.red),
+        GetBottomBarItem(
+            icon: Image(image: AssetImage('assets/icons/uisetting.png')),
+            title: Text('Pengaturan'),
+            activeColor: Colors.red)
       ],
-      currentIndex: selectedIndex,
-      onTap: onClicked,
-      selectedItemColor: Color(0xfff966be),
-      backgroundColor: Colors.white,
-      unselectedItemColor: Colors.grey,
     );
   }
 }
