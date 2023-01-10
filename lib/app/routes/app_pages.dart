@@ -8,6 +8,7 @@ import '../modules/pelanggan/bindings/pelanggan_binding.dart';
 import '../modules/pelanggan/views/pelanggan_view.dart';
 import '../modules/pengaturan/bindings/pengaturan_binding.dart';
 import '../modules/pengaturan/views/pengaturan_view.dart';
+import '../modules/pengaturan/views/profil_view.dart';
 
 part 'app_routes.dart';
 
@@ -35,6 +36,11 @@ class AppPages {
     GetPage(
       name: _Paths.PENGATURAN,
       page: () => const PengaturanView(),
+      binding: PengaturanBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFIL,
+      page: () => const ProfilView(),
       binding: PengaturanBinding(),
     ),
   ];
