@@ -1,14 +1,13 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:project_salon/app/modules/pengaturan/views/ubahprofil_view.dart';
 
-import '../controllers/profil_controller.dart';
+import '../controllers/gantisandi_controller.dart';
 
 import 'package:get/get.dart';
 
-class ProfilView extends GetView<ProfilController> {
-  const ProfilView({Key? key}) : super(key: key);
+class GantiSandiView extends GetView<GantiSandiController> {
+  const GantiSandiView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class ProfilView extends GetView<ProfilController> {
         child: Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBar(
-              title: const Text('Profile'),
+              title: const Text('Change Password'),
               centerTitle: true,
             ),
             body: Container(
@@ -37,29 +36,18 @@ class ProfilView extends GetView<ProfilController> {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('Name : Muhamad Alfan Abadi',
+                    Text('Old Password : ',
                         textAlign: TextAlign.left,
                         style: TextStyle(fontSize: 20, color: Colors.black)),
-                    Text('Status : Owner',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 20, color: Colors.black)),
-                    Text('Phone Number : 081254321572',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 20, color: Colors.black)),
-                    Text('Branch : Cirebon',
+                    Text('New Password : ',
                         textAlign: TextAlign.left,
                         style: TextStyle(fontSize: 20, color: Colors.black)),
                     TextButton(
                       style: ButtonStyle(alignment: Alignment.bottomRight),
                       child: Text(
-                        'Setting Profile',
+                        'Agree',
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const UbahProfilView()));
-                      },
+                      onPressed: () {},
                     )
                   ]),
             )));

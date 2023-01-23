@@ -9,6 +9,8 @@ abstract class Routes {
   static const PENGATURAN = _Paths.PENGATURAN;
   static const NAVBAR = _Paths.NAVBAR;
   static const PROFIL = _Paths.PROFIL;
+  static const GANTISANDI = _Paths.GANTISANDI;
+  static const UBAHPROFIL = _Paths.UBAHPROFIL;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const PENGATURAN = '/pengaturan';
   static const NAVBAR = '/navbar';
   static const PROFIL = '/profil';
+  static const GANTISANDI = '/gantisandi';
+  static const UBAHPROFIL = '/ubahprofil';
 }

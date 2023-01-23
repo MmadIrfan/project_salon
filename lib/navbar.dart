@@ -15,15 +15,15 @@ class BottomMenu extends StatelessWidget {
       bottomBar: <GetBottomBarItem>[
         GetBottomBarItem(
             icon: Image(image: AssetImage('assets/icons/stokproduk.png')),
-            title: Text('Stok'),
+            title: Text('Stock'),
             activeColor: Colors.red),
         GetBottomBarItem(
             icon: Image(image: AssetImage('assets/icons/pelanggan.png')),
-            title: Text('Pelanggan'),
+            title: Text('Customer'),
             activeColor: Colors.red),
         GetBottomBarItem(
             icon: Image(image: AssetImage('assets/icons/uisetting.png')),
-            title: Text('Pengaturan'),
+            title: Text('Setting'),
             activeColor: Colors.red)
       ],
     );
