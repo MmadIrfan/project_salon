@@ -4,7 +4,9 @@ import 'package:get/get.dart';
 
 import '../controllers/pengaturan_controller.dart';
 
+import 'gantisandi_view.dart';
 import 'profil_view.dart';
+import 'ubahprofil_view.dart';
 
 import 'package:project_salon/app/modules/login/views/login_view.dart';
 
@@ -26,7 +28,7 @@ class PengaturanView extends GetView<PengaturanController> {
             backgroundColor: Colors.transparent,
             appBar: AppBar(
               leading: Image.asset('assets/images/Logo.png'),
-              title: const Text('Pengaturan'),
+              title: const Text('Setting'),
               centerTitle: true,
             ),
             body: Center(
@@ -42,8 +44,10 @@ class PengaturanView extends GetView<PengaturanController> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => const ProfilView()));
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(const SnackBar(content: Text('Profile')));
                   },
-                  child: const Text('Profil'),
+                  child: const Text('Profile'),
                 ),
                 const SizedBox(height: 20),
                 OutlinedButton(
@@ -51,10 +55,14 @@ class PengaturanView extends GetView<PengaturanController> {
                         overlayColor:
                             MaterialStateProperty.all<Color>(Colors.green)),
                     onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const GantiSandiView()));
                       ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Ganti Kata Sandi')));
+                          const SnackBar(content: Text('Change Password')));
                     },
-                    child: const Text('Ganti Kata Sandi')),
+                    child: const Text('Change Password')),
                 const SizedBox(height: 20),
                 OutlinedButton(
                     style: ButtonStyle(
@@ -66,7 +74,7 @@ class PengaturanView extends GetView<PengaturanController> {
                           MaterialPageRoute(
                               builder: (context) => const LoginView()));
                       ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Logout berhasil')));
+                          const SnackBar(content: Text('Logout Successful')));
                     },
                     child: const Text('Logout'))
               ],
