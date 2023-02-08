@@ -20,8 +20,13 @@ class PengaturanView extends GetView<PengaturanController> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Colors.pink,
-            Colors.white,
+            Color(0xfffc7fc7),
+            Color(0xffff96d0),
+            Color(0xffffacda),
+            Color(0xffffc1e3),
+            Color(0xffffd6ec),
+            Color(0xffffebf6),
+            Color(0xffffffff),
           ],
         )),
         child: Scaffold(
@@ -29,6 +34,7 @@ class PengaturanView extends GetView<PengaturanController> {
             appBar: AppBar(
               leading: Image.asset('assets/images/Logo.png'),
               title: const Text('Setting'),
+              backgroundColor: Color(0xfff966be),
               centerTitle: true,
             ),
             body: Center(
