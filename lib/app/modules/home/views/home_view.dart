@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
-
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -15,13 +13,16 @@ class HomeView extends GetView<HomeController> {
           begin: Alignment.topCenter,
           end: Alignment(0, 2),
           colors: <Color>[
-            Color(0xfff966be),
+            Color.fromARGB(255, 250, 70, 178),
             Color(0xfffc7fc7),
-            Color(0xffff96d0),
-            Color(0xffffacda),
-            Color(0xffffc1e3),
-            Color(0xffffd6ec),
-            Color(0xffffebf6),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
             Color(0xffffffff),
           ],
           tileMode: TileMode.mirror,
@@ -84,23 +85,72 @@ class HomeView extends GetView<HomeController> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                  itemCount: 10,
-                  itemBuilder: (context, i) {
-                    return const Card(
-                      elevation: 8,
-                      child: ListTile(
-                        title: Text(
-                          "Nama Produk",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+              child: Container(
+                padding: EdgeInsets.only(top: 20),
+                height: 414,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment(0, 2),
+                    colors: <Color>[
+                      Color(0xfff966be),
+                      Color(0xfffc7fc7),
+                      Color(0xffff96d0),
+                      Color(0xffffd6ec),
+                      Color(0xffffebf6),
+                      Color(0xffffffff),
+                    ],
+                    tileMode: TileMode.mirror,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(
+                      30.0,
+                    ),
+                  ),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text(
+                                "Data Produk",
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.0),
+                              ),
+                              SizedBox(height: 30),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white,
+                                    fixedSize: const Size(70, 32),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(50))),
+                                onPressed: () {},
+                                child: const Text(
+                                  'Tambah',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 10.5,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        subtitle: Text('Sisa stok : 100'),
-                        trailing: Text("Tambah"),
-                      ),
-                    );
-                  }),
-            )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
