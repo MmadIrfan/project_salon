@@ -60,8 +60,14 @@ class HomeView extends GetView<HomeController> {
         body: Column(
           children: <Widget>[
             Container(
-              height: 100,
-              color: Colors.white,
+              margin: EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
               padding: const EdgeInsets.all(25.2),
               child: TextField(
                 decoration: InputDecoration(
