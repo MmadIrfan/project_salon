@@ -28,37 +28,60 @@ class PelangganView extends GetView<PelangganController> {
       ),
       child: Scaffold(
         appBar: AppBar(
+          leading: Container(
+              decoration: BoxDecoration(
+                border: Border.all(width: 2, color: Colors.white),
+                borderRadius: BorderRadius.circular(100),
+                color: Colors.white,
+              ),
+              child: Image.asset("assets/images/logo.png")),
           backgroundColor: Color(0xfff966be),
-          centerTitle: true,
-          title: const Text('Pelanggan'),
+          title: const Text(
+            'Wul@n Beauty Salon',
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          ),
+          elevation: 0.0,
+          actions: <Widget>[
+            Container(
+              margin: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(3.0),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                borderRadius: BorderRadius.all(Radius.circular(
+                        8.0) //                 <--- border radius here
+                    ),
+              ),
+              child: Text('Karyawan'),
+            )
+          ],
         ),
         backgroundColor: Colors.transparent,
-        body: ListView(
-          children: [
-            Card(
-              child: Column(
-                children: <Widget>[
-                  Padding(
-                      padding: const EdgeInsets.all(10.2),
-                      child: TextField(
-                          decoration: InputDecoration(
-                              labelText: "Pencarian",
-                              hintText: "Cari Pelanggan",
-                              prefixIcon: Icon(Icons.search),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(50),
-                                  borderSide:
-                                      BorderSide(color: Color(0xfff966be)))))),
-                ],
-              ),
-            ),
+        body: Column(
+          children: <Widget>[
             Container(
-                child: Text(
-              'HomeView is working',
-              style: TextStyle(fontSize: 20),
-            )),
+              height: 100,
+              margin: EdgeInsets.only(top: 20),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(
+                    30.0,
+                  ),
+                ),
+              ),
+              padding: const EdgeInsets.all(11.0),
+              child: TextField(
+                  decoration: InputDecoration(
+                      labelText: "Pencarian",
+                      hintText: "Cari Pelanggan",
+                      prefixIcon: Icon(Icons.search),
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50),
+                          borderSide: BorderSide(color: Color(0xfff966be))))),
+            )
           ],
         ),
       ),
