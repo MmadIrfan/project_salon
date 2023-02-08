@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -30,7 +31,7 @@ class HomeView extends GetView<HomeController> {
         appBar: AppBar(
           leading: Container(
               decoration: BoxDecoration(
-                border: Border.all(width: 2, color: Colors.white),
+                border: Border.all(width: 1, color: Colors.black),
                 borderRadius: BorderRadius.circular(100),
                 color: Colors.white,
               ),
@@ -38,7 +39,7 @@ class HomeView extends GetView<HomeController> {
           backgroundColor: Color(0xfff966be),
           title: const Text(
             'Wul@n Beauty Salon',
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
           ),
           elevation: 0.0,
           actions: <Widget>[
@@ -56,6 +57,46 @@ class HomeView extends GetView<HomeController> {
           ],
         ),
         backgroundColor: Colors.transparent,
+        body: Column(
+          children: <Widget>[
+            Container(
+              height: 100,
+              color: Colors.white,
+              padding: const EdgeInsets.all(25.2),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "Pencarian",
+                  hintText: "Cari barang disini...",
+                  prefixIcon: Icon(Icons.search),
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50),
+                    borderSide: BorderSide(color: Color(0xfff966be)),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, i) {
+                    return const Card(
+                      elevation: 8,
+                      child: ListTile(
+                        title: Text(
+                          "Nama Produk",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text('Sisa stok : 100'),
+                        trailing: Text("Tambah"),
+                      ),
+                    );
+                  }),
+            )
+          ],
+        ),
       ),
     );
   }
