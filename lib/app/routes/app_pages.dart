@@ -23,7 +23,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.NAVBAR,
-      page: () => const BottomMenu(),
+      page: () => LandingPage(),
     ),
     GetPage(
       name: _Paths.HOME,
