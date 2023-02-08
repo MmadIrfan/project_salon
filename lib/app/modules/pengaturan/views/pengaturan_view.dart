@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/pengaturan_controller.dart';
-
 import 'gantisandi_view.dart';
 import 'profil_view.dart';
-import 'ubahprofil_view.dart';
-
 import 'package:project_salon/app/modules/login/views/login_view.dart';
 
 class PengaturanView extends GetView<PengaturanController> {

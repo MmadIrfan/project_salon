@@ -19,7 +19,7 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const PELANGGAN = '/pelanggan';
   static const PENGATURAN = '/pengaturan';
-  static const NAVBAR = '/navbar';
+  static const NAVBAR = '/AppSalon';
   static const PROFIL = '/profil';
   static const GANTISANDI = '/gantisandi';
   static const UBAHPROFIL = '/ubahprofil';
