@@ -16,11 +16,14 @@ class PelangganView extends GetView<PelangganController> {
           colors: <Color>[
             Color(0xfff966be),
             Color(0xfffc7fc7),
-            Color(0xffff96d0),
-            Color(0xffffacda),
-            Color(0xffffc1e3),
-            Color(0xffffd6ec),
-            Color(0xffffebf6),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
             Color(0xffffffff),
           ],
           tileMode: TileMode.mirror,
@@ -64,13 +67,13 @@ class PelangganView extends GetView<PelangganController> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
+                  topLeft: Radius.circular(20.0),
                   topRight: Radius.circular(
-                    30.0,
+                    20.0,
                   ),
                 ),
               ),
-              padding: const EdgeInsets.all(11.0),
+              padding: const EdgeInsets.all(25.0),
               child: TextField(
                   decoration: InputDecoration(
                       labelText: "Pencarian",
@@ -81,7 +84,24 @@ class PelangganView extends GetView<PelangganController> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50),
                           borderSide: BorderSide(color: Color(0xfff966be))))),
-            )
+            ),
+            Column(
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(top: 20),
+                  height: 414,
+                  decoration: BoxDecoration(
+                    color: Color(0xfff966be),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(
+                        30.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
