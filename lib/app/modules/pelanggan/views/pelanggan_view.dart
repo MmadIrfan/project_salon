@@ -145,7 +145,7 @@ class PelangganView extends GetView<PelangganController> {
                             ),
                           ),
                           padding: const EdgeInsets.all(2.2),
-                          height: 260,
+                          height: 385.6,
                           child: ListView.builder(
                               itemCount: 10,
                               itemBuilder: (context, i) {
