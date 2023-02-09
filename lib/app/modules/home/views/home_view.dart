@@ -177,7 +177,7 @@ class HomeView extends GetView<HomeController> {
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      subtitle: Text('Sisa stok : 100'),
+                                      subtitle: Text('Sisa stok : 1'),
                                       trailing: Text("Tambah"),
                                     ),
                                   );
