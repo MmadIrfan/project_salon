@@ -24,11 +24,13 @@ class HomeView extends GetView<HomeController> {
             Color(0xffffffff),
             Color(0xffffffff),
             Color(0xffffffff),
+            Color(0xffffffff),
           ],
           tileMode: TileMode.mirror,
         ),
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           leading: Container(
               decoration: BoxDecoration(
@@ -36,11 +38,11 @@ class HomeView extends GetView<HomeController> {
                 borderRadius: BorderRadius.circular(100),
                 color: Colors.white,
               ),
-              child: Image.asset("assets/images/logo.png")),
+              child: Image.asset("assets/images/Logo.png")),
           backgroundColor: const Color(0xfff966be),
           title: const Text(
             'Wul@n Beauty Salon',
-            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
           ),
           elevation: 0.0,
           actions: <Widget>[
@@ -69,7 +71,7 @@ class HomeView extends GetView<HomeController> {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              padding: const EdgeInsets.all(25.2),
+              padding: const EdgeInsets.all(15.2),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "Pencarian",
@@ -85,94 +87,100 @@ class HomeView extends GetView<HomeController> {
               ),
             ),
             Expanded(
-              child: Container(
-                padding: const EdgeInsets.only(top: 20),
-                height: 414,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment(0, 2),
-                    colors: <Color>[
-                      Color(0xfff966be),
-                      Color(0xfffc7fc7),
-                      Color(0xffff96d0),
-                      Color(0xffffd6ec),
-                      Color(0xffffebf6),
-                      Color(0xffffffff),
-                    ],
-                    tileMode: TileMode.mirror,
-                  ),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30.0),
-                    topRight: Radius.circular(
-                      30.0,
+              child: SingleChildScrollView(
+                child: Container(
+                  padding: const EdgeInsets.only(top: 20),
+                  height: 600,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment(0, 2),
+                      colors: <Color>[
+                        Color(0xfff966be),
+                        Color(0xfffc7fc7),
+                        Color(0xffff96d0),
+                        Color(0xffffd6ec),
+                        Color(0xffffebf6),
+                        Color(0xffffffff),
+                      ],
+                      tileMode: TileMode.mirror,
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(
+                        30.0,
+                      ),
                     ),
                   ),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              const Text(
-                                "Data Produk",
-                                style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.0),
-                              ),
-                              const SizedBox(height: 30),
-                              ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white,
-                                    fixedSize: const Size(70, 32),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(50))),
-                                onPressed: () {},
-                                child: const Text(
-                                  'Tambah',
+                  child: Column(
+                    children: <Widget>[
+                      Column(
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                const Text(
+                                  "Data Produk",
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 10.5,
-                                      fontWeight: FontWeight.bold),
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.0),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 10),
-                          decoration: const BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              topRight: Radius.circular(20.0),
+                                const SizedBox(height: 30),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.white,
+                                      fixedSize: const Size(70, 32),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(50))),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Tambah',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 9.5,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          padding: const EdgeInsets.all(2.2),
-                          height: 363,
-                          child: ListView.builder(
-                              itemCount: 10,
-                              itemBuilder: (context, i) {
-                                return Card(
-                                  shape: RoundedRectangleBorder(
-                                    side: const BorderSide(
-                                      color: Colors.black,
+                          Container(
+                            margin: const EdgeInsets.only(top: 10),
+                            decoration: const BoxDecoration(
+                              color: Colors.transparent,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20.0),
+                                topRight: Radius.circular(20.0),
+                              ),
+                            ),
+                            padding: const EdgeInsets.all(2.2),
+                            height: 457.6,
+                            child: ListView.builder(
+                                itemCount: 10,
+                                itemBuilder: (context, i) {
+                                  return Card(
+                                    shape: RoundedRectangleBorder(
+                                      side: const BorderSide(
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(10.0),
                                     ),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Nama Produk",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
+                                    child: const ListTile(
+                                      title: Text(
+                                        "Nama Produk",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      subtitle: Text('Sisa stok : 100'),
+                                      trailing: Text("Tambah"),
                                     ),
+<<<<<<< HEAD
                                     subtitle: Text('Sisa stok : 100'),
                                     trailing: Text("Tambah"),
                                   ),
@@ -182,6 +190,15 @@ class HomeView extends GetView<HomeController> {
                       ],
                     )
                   ],
+=======
+                                  );
+                                }),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+>>>>>>> ffa30ec0d334729d7d89c7fddf92c81b65e6eeaf
                 ),
               ),
             ),
