@@ -142,7 +142,7 @@ class HomeView extends GetView<HomeController> {
                                     'Tambah',
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 9.5,
+                                        fontSize: 9,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
