@@ -161,7 +161,7 @@ class HomeView extends GetView<HomeController> {
                             padding: const EdgeInsets.all(2.2),
                             height: 457.6,
                             child: ListView.builder(
-                                itemCount: 10,
+                                itemCount: 15,
                                 itemBuilder: (context, i) {
                                   return Card(
                                     shape: RoundedRectangleBorder(

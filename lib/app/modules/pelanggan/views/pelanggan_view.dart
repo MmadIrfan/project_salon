@@ -40,7 +40,7 @@ class PelangganView extends GetView<PelangganController> {
                 borderRadius: BorderRadius.circular(100),
                 color: Colors.white,
               ),
-              child: Image.asset("assets/images/logo.png")),
+              child: Image.asset("assets/images/Logo.png")),
           backgroundColor: Color(0xfff966be),
           title: const Text(
             'Wul@n Beauty Salon',
