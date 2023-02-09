@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -24,6 +23,7 @@ class HomeView extends GetView<HomeController> {
             Color(0xffffffff),
             Color(0xffffffff),
             Color(0xffffffff),
+            Color(0xffffffff),
           ],
           tileMode: TileMode.mirror,
         ),
@@ -37,7 +37,7 @@ class HomeView extends GetView<HomeController> {
                 color: Colors.white,
               ),
               child: Image.asset("assets/images/logo.png")),
-          backgroundColor: Color(0xfff966be),
+          backgroundColor: const Color(0xfff966be),
           title: const Text(
             'Wul@n Beauty Salon',
             style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
@@ -49,11 +49,11 @@ class HomeView extends GetView<HomeController> {
               padding: const EdgeInsets.all(3.0),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.white),
-                borderRadius: BorderRadius.all(Radius.circular(
+                borderRadius: const BorderRadius.all(Radius.circular(
                         8.0) //                 <--- border radius here
                     ),
               ),
-              child: Text('Karyawan'),
+              child: const Text('Karyawan'),
             )
           ],
         ),
@@ -61,8 +61,8 @@ class HomeView extends GetView<HomeController> {
         body: Column(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(top: 10),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(top: 10),
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20.0),
@@ -74,19 +74,19 @@ class HomeView extends GetView<HomeController> {
                 decoration: InputDecoration(
                   labelText: "Pencarian",
                   hintText: "Cari barang disini...",
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: const Icon(Icons.search),
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50),
-                    borderSide: BorderSide(color: Color(0xfff966be)),
+                    borderSide: const BorderSide(color: Color(0xfff966be)),
                   ),
                 ),
               ),
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 height: 414,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -118,14 +118,14 @@ class HomeView extends GetView<HomeController> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Text(
+                              const Text(
                                 "Data Produk",
                                 style: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.0),
                               ),
-                              SizedBox(height: 30),
+                              const SizedBox(height: 30),
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
@@ -146,8 +146,8 @@ class HomeView extends GetView<HomeController> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 10),
-                          decoration: BoxDecoration(
+                          margin: const EdgeInsets.only(top: 10),
+                          decoration: const BoxDecoration(
                             color: Colors.transparent,
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20.0),
@@ -159,9 +159,14 @@ class HomeView extends GetView<HomeController> {
                           child: ListView.builder(
                               itemCount: 10,
                               itemBuilder: (context, i) {
-                                return const Card(
-                                  elevation: 8,
-                                  child: ListTile(
+                                return Card(
+                                  shape: RoundedRectangleBorder(
+                                    side: const BorderSide(
+                                      color: Colors.black,
+                                    ),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  child: const ListTile(
                                     title: Text(
                                       "Nama Produk",
                                       style: TextStyle(
