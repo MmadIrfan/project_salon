@@ -128,7 +128,6 @@ class HomeView extends GetView<HomeController> {
                               SizedBox(height: 30),
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white,
                                     fixedSize: const Size(70, 32),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
