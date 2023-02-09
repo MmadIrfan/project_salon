@@ -180,17 +180,6 @@ class HomeView extends GetView<HomeController> {
                                       subtitle: Text('Sisa stok : 1'),
                                       trailing: Text("Tambah"),
                                     ),
-<<<<<<< HEAD
-                                    subtitle: Text('Sisa stok : 100'),
-                                    trailing: Text("Tambah"),
-                                  ),
-                                );
-                              }),
-                        ),
-                      ],
-                    )
-                  ],
-=======
                                   );
                                 }),
                           )
@@ -198,7 +187,6 @@ class HomeView extends GetView<HomeController> {
                       )
                     ],
                   ),
->>>>>>> ffa30ec0d334729d7d89c7fddf92c81b65e6eeaf
                 ),
               ),
             ),
