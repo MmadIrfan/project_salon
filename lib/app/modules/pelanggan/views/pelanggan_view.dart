@@ -45,7 +45,6 @@ class PelangganView extends GetView<PelangganController> {
               ),
               child: Image.asset("assets/images/Logo.png")),
           backgroundColor: Color(0xfff966be),
-          backgroundColor: const Color(0xfff966be),
           title: const Text(
             'Wul@n Beauty Salon',
             style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
