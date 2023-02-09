@@ -145,6 +145,35 @@ class HomeView extends GetView<HomeController> {
                             ],
                           ),
                         ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20.0),
+                              topRight: Radius.circular(20.0),
+                            ),
+                          ),
+                          padding: const EdgeInsets.all(2.2),
+                          height: 363,
+                          child: ListView.builder(
+                              itemCount: 10,
+                              itemBuilder: (context, i) {
+                                return const Card(
+                                  elevation: 8,
+                                  child: ListTile(
+                                    title: Text(
+                                      "Nama Produk",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text('Sisa stok : 100'),
+                                    trailing: Text("Tambah"),
+                                  ),
+                                );
+                              }),
+                        )
                       ],
                     )
                   ],
