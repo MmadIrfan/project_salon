@@ -30,7 +30,6 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           leading: Container(
               decoration: BoxDecoration(
@@ -60,6 +59,7 @@ class HomeView extends GetView<HomeController> {
           ],
         ),
         backgroundColor: Colors.transparent,
+        resizeToAvoidBottomInset: false,
         body: Column(
           children: <Widget>[
             Container(
@@ -117,79 +117,83 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ],
                 ),
-                child: Column(
-                  children: <Widget>[
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              const Text(
-                                "Data Produk",
-                                style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.0),
-                              ),
-                              const SizedBox(height: 30),
-                              ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white,
-                                    fixedSize: const Size(70, 32),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(50))),
-                                onPressed: () {},
-                                child: const Text(
-                                  'Tambah',
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                const Text(
+                                  "Data Produk",
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 9,
-                                      fontWeight: FontWeight.bold),
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.0),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 10),
-                          decoration: const BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              topRight: Radius.circular(20.0),
+                                const SizedBox(height: 30),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.white,
+                                      fixedSize: const Size(70, 32),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(50))),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Tambah',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 9,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          padding: const EdgeInsets.all(2.2),
-                          height: 457.6,
-                          child: ListView.builder(
-                              itemCount: 15,
-                              itemBuilder: (context, i) {
-                                return Card(
-                                  shape: RoundedRectangleBorder(
-                                    side: const BorderSide(
-                                      color: Colors.black,
+                          Container(
+                            margin: const EdgeInsets.only(top: 10),
+                            decoration: const BoxDecoration(
+                              color: Colors.transparent,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20.0),
+                                topRight: Radius.circular(20.0),
+                              ),
+                            ),
+                            padding: const EdgeInsets.all(2.2),
+                            height: 457.6,
+                            child: ListView.builder(
+                                itemCount: 15,
+                                itemBuilder: (context, i) {
+                                  return Card(
+                                    shape: RoundedRectangleBorder(
+                                      side: const BorderSide(
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(10.0),
                                     ),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Nama Produk",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
+                                    child: const ListTile(
+                                      title: Text(
+                                        "Nama Produk",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      subtitle: Text('Sisa stok : 1'),
+                                      trailing: Text("Tambah"),
                                     ),
-                                    subtitle: Text('Sisa stok : 1'),
-                                    trailing: Text("Tambah"),
-                                  ),
-                                );
-                              }),
-                        )
-                      ],
-                    )
-                  ],
+                                  );
+                                }),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

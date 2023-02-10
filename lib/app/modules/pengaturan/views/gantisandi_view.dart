@@ -36,6 +36,7 @@ class GantiSandiView extends GetView<GantiSandiController> {
               ),
               centerTitle: true,
             ),
+            resizeToAvoidBottomInset: false,
             body: Column(children: <Widget>[
               Container(
                   padding: const EdgeInsets.only(top: 25),

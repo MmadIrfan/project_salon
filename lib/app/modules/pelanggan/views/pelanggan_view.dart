@@ -122,97 +122,106 @@ class PelangganView extends GetView<PelangganController> {
                     ),
                   ],
                 ),
-                child: Column(
-                  children: <Widget>[
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              const Text(
-                                "Pelanggan",
-                                style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.0),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 10),
-                          decoration: const BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              topRight: Radius.circular(20.0),
-                            ),
-                          ),
-                          padding: const EdgeInsets.all(2.2),
-                          height: 380.6,
-                          child: ListView.builder(
-                              itemCount: 10,
-                              itemBuilder: (context, i) {
-                                return Card(
-                                  shape: RoundedRectangleBorder(
-                                    side: const BorderSide(
-                                      color: Colors.black,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Pelanggan",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    subtitle: Text('Biaya : Rp.xxx.xxx.xxx'),
-                                  ),
-                                );
-                                // ignore: dead_code
-                              }),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 20),
-                          child: Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                const Text(
-                                  "Total Biaya : Rp.xxx.xxx.xxx",
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1.0),
-                                ),
-                                const SizedBox(height: 30),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.white,
-                                      fixedSize: const Size(70, 32),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50))),
-                                  onPressed: () {},
-                                  child: const Text(
-                                    'Tambah',
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  const Text(
+                                    "Pelanggan",
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 9,
-                                        fontWeight: FontWeight.bold),
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 1.0),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
+                            Container(
+                              margin: const EdgeInsets.only(top: 10),
+                              decoration: const BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(20.0),
+                                  topRight: Radius.circular(20.0),
+                                ),
+                              ),
+                              padding: const EdgeInsets.all(2.2),
+                              height: 380.6,
+                              child: ListView.builder(
+                                  itemCount: 10,
+                                  itemBuilder: (context, i) {
+                                    return Card(
+                                      shape: RoundedRectangleBorder(
+                                        side: const BorderSide(
+                                          color: Colors.black,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: const ListTile(
+                                        title: Text(
+                                          "Pelanggan",
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        subtitle:
+                                            Text('Biaya : Rp.xxx.xxx.xxx'),
+                                      ),
+                                    );
+                                    // ignore: dead_code
+                                  }),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 20, horizontal: 20),
+                              child: Container(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    const Text(
+                                      "Total Biaya : Rp.xxx.xxx.xxx",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 1.0),
+                                    ),
+                                    const SizedBox(height: 30),
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.white,
+                                          fixedSize: const Size(70, 32),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(50))),
+                                      onPressed: () {},
+                                      child: const Text(
+                                        'Tambah',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

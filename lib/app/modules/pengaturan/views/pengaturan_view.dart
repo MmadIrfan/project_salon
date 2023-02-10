@@ -28,6 +28,7 @@ class PengaturanView extends GetView<PengaturanController> {
           ],
         )),
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             leading: Container(
