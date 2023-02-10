@@ -93,7 +93,7 @@ class PelangganView extends GetView<PelangganController> {
             ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 25),
                 height: 600,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -115,6 +115,12 @@ class PelangganView extends GetView<PelangganController> {
                       30.0,
                     ),
                   ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black,
+                      blurRadius: 10,
+                    ),
+                  ],
                 ),
                 child: Column(
                   children: <Widget>[
@@ -145,7 +151,7 @@ class PelangganView extends GetView<PelangganController> {
                             ),
                           ),
                           padding: const EdgeInsets.all(2.2),
-                          height: 385.6,
+                          height: 380.6,
                           child: ListView.builder(
                               itemCount: 10,
                               itemBuilder: (context, i) {
