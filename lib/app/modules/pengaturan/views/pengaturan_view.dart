@@ -122,7 +122,7 @@ class PengaturanView extends GetView<PengaturanController> {
                               style: ButtonStyle(
                                   overlayColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colors.green)),
+                                          Colors.white)),
                               onPressed: () {
                                 Navigator.push(
                                     context,
@@ -145,7 +145,7 @@ class PengaturanView extends GetView<PengaturanController> {
                               style: ButtonStyle(
                                   overlayColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colors.green)),
+                                          Colors.white)),
                               onPressed: () {
                                 Navigator.push(
                                     context,
@@ -168,7 +168,7 @@ class PengaturanView extends GetView<PengaturanController> {
                               style: ButtonStyle(
                                   overlayColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colors.green)),
+                                          Colors.white)),
                               onPressed: () {
                                 Navigator.push(
                                     context,
