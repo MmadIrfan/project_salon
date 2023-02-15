@@ -12,6 +12,7 @@ import '../modules/pengaturan/views/pengaturan_view.dart';
 import '../modules/pengaturan/views/profil_view.dart';
 import '../modules/pengaturan/views/gantisandi_view.dart';
 import '../modules/pengaturan/views/ubahprofil_view.dart';
+import '../modules/pelanggan/views/tambah_pelanggan_view.dart';
 
 part 'app_routes.dart';
 
@@ -59,6 +60,11 @@ class AppPages {
       name: _Paths.UBAHPROFIL,
       page: () => const UbahProfilView(),
       binding: PengaturanBinding(),
+    ),
+    GetPage(
+      name: _Paths.TAMBAHPELANGGAN,
+      page: () => const TambahPelangganView(),
+      binding: PelangganBinding(),
     ),
   ];
 }

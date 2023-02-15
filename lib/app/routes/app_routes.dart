@@ -11,6 +11,7 @@ abstract class Routes {
   static const PROFIL = _Paths.PROFIL;
   static const GANTISANDI = _Paths.GANTISANDI;
   static const UBAHPROFIL = _Paths.UBAHPROFIL;
+  static const TAMBAHPELANGGAN = _Paths.TAMBAHPELANGGAN;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const PROFIL = '/profil';
   static const GANTISANDI = '/gantisandi';
   static const UBAHPROFIL = '/ubahprofil';
+  static const TAMBAHPELANGGAN = '/tambahpelanggan';
 }
