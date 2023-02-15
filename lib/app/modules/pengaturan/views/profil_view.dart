@@ -10,7 +10,6 @@ class ProfilView extends GetView<ProfilController> {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -147,7 +146,7 @@ class ProfilView extends GetView<ProfilController> {
         ),
       ),
     );
-=======
+
     return Scaffold(
         backgroundColor: Color(0xfff966be),
         appBar: AppBar(
@@ -303,6 +302,5 @@ class ProfilView extends GetView<ProfilController> {
             ),
           ),
         ]));
->>>>>>> 0fea09727e78c50dfe13e3e561523e7b40180c15
   }
 }
