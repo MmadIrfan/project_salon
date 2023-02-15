@@ -30,7 +30,6 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           leading: Container(
               decoration: BoxDecoration(
@@ -60,6 +59,7 @@ class HomeView extends GetView<HomeController> {
           ],
         ),
         backgroundColor: Colors.transparent,
+        resizeToAvoidBottomInset: false,
         body: Column(
           children: <Widget>[
             Container(
@@ -87,34 +87,41 @@ class HomeView extends GetView<HomeController> {
               ),
             ),
             Expanded(
-              child: SingleChildScrollView(
-                child: Container(
-                  padding: const EdgeInsets.only(top: 20),
-                  height: 600,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment(0, 2),
-                      colors: <Color>[
-                        Color(0xfff966be),
-                        Color(0xfffc7fc7),
-                        Color(0xffff96d0),
-                        Color(0xffffd6ec),
-                        Color(0xffffebf6),
-                        Color(0xffffffff),
-                      ],
-                      tileMode: TileMode.mirror,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30.0),
-                      topRight: Radius.circular(
-                        30.0,
-                      ),
+              child: Container(
+                padding: const EdgeInsets.only(top: 20),
+                height: 600,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment(0, 2),
+                    colors: <Color>[
+                      Color(0xfff966be),
+                      Color(0xfffc7fc7),
+                      Color(0xffff96d0),
+                      Color(0xffffd6ec),
+                      Color(0xffffebf6),
+                      Color(0xffffffff),
+                    ],
+                    tileMode: TileMode.mirror,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(
+                      30.0,
                     ),
                   ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black,
+                      blurRadius: 10,
+                    ),
+                  ],
+                ),
+                child: SingleChildScrollView(
                   child: Column(
                     children: <Widget>[
                       Column(
+                        mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
                             padding:
@@ -161,7 +168,7 @@ class HomeView extends GetView<HomeController> {
                             padding: const EdgeInsets.all(2.2),
                             height: 457.6,
                             child: ListView.builder(
-                                itemCount: 10,
+                                itemCount: 15,
                                 itemBuilder: (context, i) {
                                   return Card(
                                     shape: RoundedRectangleBorder(

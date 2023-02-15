@@ -29,6 +29,7 @@ class LoginView extends GetView<LoginController> {
         ),
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
         body: _page(),
       ),
