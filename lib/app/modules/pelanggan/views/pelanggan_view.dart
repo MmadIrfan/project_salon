@@ -141,29 +141,6 @@ class PelangganView extends GetView<PelangganController> {
                                         fontWeight: FontWeight.bold,
                                         letterSpacing: 1.0),
                                   ),
-                                  const SizedBox(height: 30),
-                                  ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.white,
-                                        fixedSize: const Size(70, 32),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(50))),
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const TambahPelangganView()));
-                                    },
-                                    child: const Text(
-                                      'Tambah',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 9,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -225,7 +202,13 @@ class PelangganView extends GetView<PelangganController> {
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(50))),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const TambahPelangganView()));
+                                      },
                                       child: const Text(
                                         'Tambah',
                                         style: TextStyle(
