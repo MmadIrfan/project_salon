@@ -75,7 +75,6 @@ class HomeView extends GetView<HomeController> {
               padding: const EdgeInsets.all(15.2),
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: "Pencarian",
                   hintText: "Cari barang disini...",
                   prefixIcon: const Icon(Icons.search),
                   filled: true,

@@ -88,12 +88,12 @@ class TambahPelangganView extends GetView {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
+                            keyboardType: TextInputType.numberWithOptions(),
                             decoration: new InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              hintStyle: const TextStyle(color: Colors.black),
-                              hintText: "Tanggal/Bulan/Tahun",
-                              labelText: "Tanggal",
+                              hintStyle: const TextStyle(color: Colors.grey),
+                              hintText: "Tanggal-Bulan-Tahun",
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18),
                                   borderSide:
@@ -121,9 +121,8 @@ class TambahPelangganView extends GetView {
                             decoration: new InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              hintStyle: const TextStyle(color: Colors.black),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               hintText: "masukan nama Pelanggan",
-                              labelText: "Nama Pelanggan",
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18),
                                   borderSide:
@@ -151,9 +150,8 @@ class TambahPelangganView extends GetView {
                             decoration: new InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              hintStyle: const TextStyle(color: Colors.black),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               hintText: "masukan Treatment",
-                              labelText: "Treatment",
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18),
                                   borderSide:
@@ -181,9 +179,8 @@ class TambahPelangganView extends GetView {
                             decoration: new InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              hintStyle: const TextStyle(color: Colors.black),
+                              hintStyle: const TextStyle(color: Colors.grey),
                               hintText: "masukan nama anda",
-                              labelText: "Nama anda",
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18),
                                   borderSide:

@@ -79,8 +79,7 @@ class PelangganView extends GetView<PelangganController> {
               padding: const EdgeInsets.all(15.2),
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: "Pencarian",
-                  hintText: "Cari barang disini...",
+                  hintText: "Cari data pelanggan disini...",
                   prefixIcon: const Icon(Icons.search),
                   filled: true,
                   fillColor: Colors.white,

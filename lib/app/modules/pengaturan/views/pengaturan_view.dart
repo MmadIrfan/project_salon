@@ -175,9 +175,6 @@ class PengaturanView extends GetView<PengaturanController> {
                                     MaterialPageRoute(
                                         builder: (context) =>
                                             const LoginView()));
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text('Logout Successful')));
                               },
                             ),
                           )
