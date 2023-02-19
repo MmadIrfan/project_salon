@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../controllers/pelanggan_controller.dart';
 
-import 'package:intl/intl.dart';
+import '../views/tambah_pelanggan_view.dart';
 
 class PelangganView extends GetView<PelangganController> {
   const PelangganView({Key? key}) : super(key: key);
@@ -17,13 +17,18 @@ class PelangganView extends GetView<PelangganController> {
           begin: Alignment.topCenter,
           end: Alignment(0, 2),
           colors: <Color>[
-            Color(0xfff966be),
+            Color.fromARGB(255, 250, 70, 178),
             Color(0xfffc7fc7),
-            Color(0xffff96d0),
-            Color(0xffffacda),
-            Color(0xffffc1e3),
-            Color(0xffffd6ec),
-            Color(0xffffebf6),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
+            Color(0xffffffff),
             Color(0xffffffff),
           ],
           tileMode: TileMode.mirror,
@@ -137,6 +142,29 @@ class PelangganView extends GetView<PelangganController> {
                                         fontWeight: FontWeight.bold,
                                         letterSpacing: 1.0),
                                   ),
+                                  const SizedBox(height: 30),
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.white,
+                                        fixedSize: const Size(70, 32),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(50))),
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const TambahPelangganView()));
+                                    },
+                                    child: const Text(
+                                      'Tambah',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 9,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -173,7 +201,6 @@ class PelangganView extends GetView<PelangganController> {
                                             Text('Biaya : Rp.xxx.xxx.xxx'),
                                       ),
                                     );
-                                    // ignore: dead_code
                                   }),
                             ),
                             Padding(
